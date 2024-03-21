@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("gym_girl.jpeg");
+    background-size: 100%;
+    color: white;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+.gym_name{
+    display: flex;
+    margin-right: 360px;
+    margin-top: 15px;
+    width:250px;
+    height:50px;
+    border: 1px solid red;
+    background-color: transparent;
+    color: whitesmoke ;
+}
+.nav_heading{
+    margin-left: 30px;
+}
+ul{
+    display: flex;
+    list-style: none;
+    margin-top: 15px;
+    
+}
+ul li a{
+    margin-inline:15px;
+    font-size: 18px;
+    text-decoration:underline;
+}
+ul button{
+    background-color:red;
+    color: white;
+    border-radius: 4px;
+    width:100px;
+    height:30px;
+}
+.text{
+    display: block;
+    text-align: right;
+    margin-left: 20px;
+    margin-top: 200px;
+    margin-right: 90px;
+}
+.text h1{
+    font-size: 45px;
+    margin-right: 100px;
+}
+.text p{
+    font-size: 27px;
+    margin-top: 18px;
+}
+.text button{
+    background-color:red;
+    padding:8px 15px;
+    color:white;
+    border:none;
+    margin-top: 14px;
+    margin-right: 200px;
+}
+.text button:hover{
+    border: 3px solid white;
+    background-color:green;
+    color: black;
+}
