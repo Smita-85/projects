@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym website</title>
+    <link rel="stylesheet" href="gym.css">
+</head>
+<body>
+    <nav>
+        <button class="gym_name"><h1>FIT N FINE</h1></button>
+        <div class="nav_heading">
+            <ul>
+                <li><a>HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a onclick="service()">SERVICES</a></li>
+                <li><a>REGISTER</a></li>
+                <li><a>CONTACT US</a></li>
+                <button>Learn more</button>
+            </ul>
+        </div>
+    </nav>
+    <div class="conatiner">
+        <div class="text">
+            <h1>FITNESS WONDER</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing <br>  demerit consequuntur praesentiumaccusamus, nam est<br>ratione distinctio necessitatibus dolor autem tempore<br> itaque provident id repellendus sed cum! Illo.</p>
+            <button>EXPLORE NOW</button>
+        </div>
+    </div>
+    <script>
+    function service()
+    {
+        window.location.assign("services.html")
+    }
+    </script>
+</body>
+</html>
