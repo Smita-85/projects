@@ -1,0 +1,96 @@
+
+body{
+    display:flex;
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    line-height: 10px;
+    min-height: 100vh;
+    background-image: url(5.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wrap{
+    box-shadow: inset;
+    margin:0;
+    padding:0;
+    box-sizing: 100px;
+    width: 560px;
+    background-color: white;
+    min-width: none;
+     min-height: 300px;
+     border-radius: 10px;
+     padding:30px 40px;
+     background: transparent;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    min-height: 5px;
+    color: white;
+}
+.input-box{
+    border-radius: 40px;
+    box-shadow: transparent;
+    width: 553px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    border:2px solid rgb(148, 141, 141);
+    justify-content: center;
+}
+.box1 input::placeholder{
+    color:white;
+    font-size: 15px;
+}
+.box2 input::placeholder{
+    color:white;
+    font-size: 15px;
+}
+
+
+.btn{
+    width: 550px;
+    height: 30px;
+    border-right-width: 80px;
+    align-items: center;
+    box-shadow: 0 0 10px;
+    cursor: pointer;
+    color:rgb(11, 11, 11);
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    align-content: center;
+    margin: auto;
+    }
+label{
+    box-sizing: 30px;
+    font-size: 16px;
+    font-weight: 20;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.account{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 20;
+    color: white;
+    text-align: center;
+}
+.forget{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color:white;
+    text-decoration: none;
+    display:flex;
+    justify-content: flex-end;     
+}
+.register{
+    color: white;
+    margin:-30px 0 20px;
+    text-decoration:none ;
+}
+
+/*Live Platform CCTV Network*/

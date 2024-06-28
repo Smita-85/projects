@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Recorder</title>
+</head>
+<body>
+    <h1>Video Recorder</h1>
+    <video id="video" width="640" height="480" autoplay></video>
+    <button id="recordButton">Start Recording</button>
+    <button id="stopButton" disabled>Stop Recording</button>
+    <button id="playButton" disabled>Play</button>
+    <button id="downloadButton" disabled>Download</button>
+    
+    <script>
+        let mediaRecorder;
+        let recordedBlobs;
+
+        const video = document.getElementById('video');
+        const recordButton = document.getElementById('recordButton');
+        const stopButton = document.getElementById('stopButton');
+        const playButton = document.getElementById('playButton');
+        const downloadButton = document.getElementById('downloadButton');
+
+        recordButton.addEventListener('click', startRecording);
+        stopButton.addEventListener('click', stopRecording);
+        playButton.addEventListener('click', play);
+        downloadButton.addEventListener('click', download);
+
+        async function startRecording() {
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            video.srcObject = stream;
+            const options = { mimeType: 'video/webm;codecs=vp9' };
+            recordedBlobs = [];
+            try {
+                mediaRecorder = new MediaRecorder(stream, options);
+            } catch (e) {
+                console.error('Exception while creating MediaRecorder:', e);
+                return;
+            }
+            
+            mediaRecorder.ondataavailable = handleDataAvailable;
+            mediaRecorder.start();
+            recordButton.style.display = 'none';
+            stopButton.style.display = 'inline-block';
+        }
+
+        function handleDataAvailable(event) {
+            if (event.data && event.data.size > 0) {
+                recordedBlobs.push(event.data);
+            }
+        }
+
+        async function stopRecording() {
+            mediaRecorder.stop();
+            stopButton.style.display = 'none';
+            playButton.style.display = 'inline-block';
+            downloadButton.style.display = 'inline-block';
+        }
+
+        function play() {
+            const superBuffer = new Blob(recordedBlobs, { type: 'video/webm' });
+            video.src = null;
+            video.srcObject = null;
+            video.src = window.URL.createObjectURL(superBuffer);
+            video.controls = true;
+            video.play();
+        }
+
+        function download() {
+            const blob = new Blob(recordedBlobs, { type: 'video/webm' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = 'recording.webm';
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(() => {
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            }, 100);
+        }
+    </script>
+</body>
+</html>

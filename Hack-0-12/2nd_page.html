@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCTV Control Centre Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="2nd_page.css">
+</head>
+<body>
+  <header>
+    <i class="fa-solid fa-bars" id="bar_icon"></i>
+    <h2>CCTV CONTROL CENTRE DASHBOARD</h2>
+    <div class="logout">
+      <i class="fa-solid fa-user" id="user_icon"></i>
+      <p>Admin-0742</p>
+      <button id="logout-button">Logout</button>
+    </div>
+  </header>
+  <main>
+    <h3>Recommendation System</h3>
+    <section class="recommendation-system">
+      <div class="stat">
+        <h2>PLATFORM 1</h2>
+        <p><b>LIVE COUNT</b>has increased 25% ↑</p>
+        <p><span class="positive"><b>RPF</b>  can be dispatched in zone-3</span></p>
+      </div>
+      <div class="stat">
+        <h2>PLATFORM 2</h2>
+        <p><b>LIVE COUNT</b> has increased 30% ↑</p>
+        <p><span class="negative"><b>WORKERS</b> can be dispatched</span></p>
+      </div>
+      <div class="stat">
+        <h2>PLATFORM 3</h2>
+        <p><b>CRIME POTENTIAL</b>has increased 20% ↑</p>
+        <p><span class="positive"><b>WOMEN RPF</b> can be dispatched</span></p>
+      </div>
+</section>
+      <h3>Live platform CCTV Network</h3>
+      <section class="live_platform_cctv_network">
+        
+        <!--PLATFORM-1-->
+        <div class="platform-1">
+        <img src="photo.webp">
+        <h2>PLATFORM 1</h2>
+        <p>LIVE COUNT:<b>56</b></p>
+        <p>CROWD RATE:<b>45%</b></p>
+        <p>ACTION:<b>JANITORS DISPTACHED</b></p>
+        <button class="btn-1">ALERT RPF</button>
+        <button class="btn-2">ALERT WORKERS</button>
+        <button clss="btn-3"><a href="camera_1.html">CAMERA 1</a></button>
+        </div>
+
+        <!--PLATFORM-2-->
+        <div class="platform-2">
+          <img src="Crowded bus.jpg">
+          <h2>PLATFORM 2</h2>
+          <p>LIVE COUNT:<b>248</b></p>
+          <p>CROWD RATE:<b>95%</b></p>
+          <p>ACTION:<b>RPF & SECURITY DISPATCHED</b></p>
+        <button class="btn-1">ALERT RPF</button>
+        <button class="btn-2">ALERT WORKERS</button>
+        <button class="btn-3">CAMERA 2</button>
+        </div>
+
+        <!--PLATFORM-3-->
+        <div class="platform-3">
+          <img src="sydney-australia-â€-march-crowd-people-rush-hour-bus-stop-sydney-cbd-crowd-people-rush-hour-bus-.webp">
+          <h2>PLATFORM 3</h2>
+          <p>LIVE COUNT:<b>114</b></p>
+          <p>CROWD RATE:<b>68%</b></p>
+          <p>ACTION:<b>WOMEN RPF DISPATCHED</b></p>
+        <button class="btn-1">ALERT RPF</button>
+        <button class="btn-2">ALERT WORKERS</button>
+        <button class="btn-3">CAMERA 3</button>
+        </div>
+      </section>
+  </main>
+</body>
+</html>
